@@ -6,6 +6,50 @@
   justify-content: space-evenly;
   width: 100%;
   height: max-content;
+  height: max-content;
+}
+
+form {
+  width: 60%;
+  height: 5vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border: thin solid white;
+  background-color: white;
+  border-radius: 1vw;
+  font-size: 1.8vw;
+
+}
+
+form input {
+  width: 70%;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: inherit;
+  border: thin solid transparent;
+  font-size: 2vw;
+  color: black;
+  text-align: center;
+
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  height: 100%;
+  width: 25%;
+  border: thin solid transparent;
+  border-radius: inherit;
+  color: aqua;
+  background-color: darkcyan;
+  font-size: 2vw;
+
 }
 
 .card {
@@ -15,8 +59,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: white;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
 }
 
 .card>* {
@@ -64,7 +110,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 5%;
+  height: 10%;
 }
 
 .card_buttons {
@@ -73,4 +119,9 @@
   align-items: center;
   justify-content: space-evenly;
   height: 15%;
+}
+
+.card_buttons>button {
+  width: 25%;
+  height: 80%;
 }
