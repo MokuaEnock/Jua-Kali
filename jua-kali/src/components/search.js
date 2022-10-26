@@ -5,6 +5,7 @@ function Search({ city, setCity }) {
     e.preventDefault();
     console.log(city);
   }
+  
   return (
     <form onSubmit={handleSubmit}>
       <input
