@@ -1,11 +1,15 @@
 import React from "react";
 
-function Search({ city, setCity }) {
+function Search({ city, setCity, setData }) {
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(city);
+    fetch(`https://goweather.herokuapp.com/weather/${city}`)
+      .then((r) => r.json())
+      .then((r) => setData(r));
+
+      console.log("Hello")
   }
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <input

@@ -7,15 +7,15 @@ function App() {
   let [data, setData] = useState([]);
   let [city, setCity] = useState("");
 
-  useEffect(() => {
-    fetch("https://goweather.herokuapp.com/weather/Dubai")
+  /*   useEffect(() => {
+    fetch(`https://goweather.herokuapp.com/weather/${city}`)
       .then((r) => r.json())
-      .then((r) => console.log(r));
-  }, []);
+      .then((r) => setData(r));
+  }, []); */
   return (
     <>
-      <Search city={city} setCity={setCity} />
-      <Card />
+      <Search city={city} setCity={setCity} setData={setData} />
+      <Card data={data} setCity={setData} city={city} />
     </>
   );
 }
