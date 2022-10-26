@@ -1,9 +1,18 @@
 import React from "react";
 
-function Search() {
+function Search({ city, setCity }) {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(city);
+  }
   return (
-    <form>
-      <input type="text" placeholder="Search City" />
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+        placeholder="Search City"
+      />
       <button type="submit">Search</button>
     </form>
   );
