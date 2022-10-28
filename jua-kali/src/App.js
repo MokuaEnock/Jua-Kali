@@ -7,11 +7,11 @@ function App() {
   let [data, setData] = useState([]);
   let [city, setCity] = useState("");
 
-  /*   useEffect(() => {
+  useEffect(() => {
     fetch(`https://goweather.herokuapp.com/weather/${city}`)
       .then((r) => r.json())
       .then((r) => setData(r));
-  }, []); */
+  }, []);
   return (
     <>
       <Search city={city} setCity={setCity} setData={setData} />
