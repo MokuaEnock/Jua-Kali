@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./components/card";
 import Search from "./components/search";
-
+import Footer from "./components/footer";
 function App() {
   let [data, setData] = useState([]);
   let [city, setCity] = useState("");
@@ -12,10 +12,12 @@ function App() {
       .then((r) => r.json())
       .then((r) => setData(r));
   }, []);
+
   return (
     <>
       <Search city={city} setCity={setCity} setData={setData} />
       <Card data={data} setCity={setData} city={city} />
+      <Footer />
     </>
   );
 }

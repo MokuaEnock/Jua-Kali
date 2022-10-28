@@ -134,3 +134,9 @@ form button {
   font-size: 1.6vw;
 
 }
+
+footer {
+  width: 100%;
+  height: 10vw;
+  background-color: wheat;
+}
