@@ -3,6 +3,7 @@ import "./App.css";
 import Card from "./components/card";
 import Search from "./components/search";
 import Footer from "./components/footer";
+import Header from "./components/header";
 function App() {
   let [data, setData] = useState([]);
   let [city, setCity] = useState("");
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Search city={city} setCity={setCity} setData={setData} />
       <Card data={data} setCity={setData} city={city} />
       <Footer />
