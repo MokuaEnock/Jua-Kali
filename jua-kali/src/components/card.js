@@ -1,6 +1,8 @@
 import React from "react";
 
 function Card({ data, city }) {
+
+
   return (
     <div id="card_container">
       <span id="card_image">
